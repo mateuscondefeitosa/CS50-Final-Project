@@ -29,6 +29,7 @@ How the project was made:
 On the front-end side of things, the project uses HTML5 templates with the aid of JINJA template designer backed with CSS and BootStrap styles. JINJA help me where I can make a single layout page, and incorporate the right HTML page accordingly of the request made in the Back-end. There are 7 pages + an Error page in this project. JavaScript controls the workings of the game, creating the board, controlling the inputs, and managing the lives of the player and the timer countdown. Unfortunately, the sudoku board needed to be hard coded, because I just found paid APIs and I don't want to use them in this project, but I just need to change the initial board and solution, and the code gets along working fine.
 
 On JavaScript we have 10 main functions:
+
     - window.onload: where I add Event Listeners to de buttons Start Game and the 1-9 Numbers;
     - function startGame: where I initialize my board game with the Lives countdown, timer, the board, and Numbers buttons;
     - function startTimer: where I start the timer countdown (changing it every second);
