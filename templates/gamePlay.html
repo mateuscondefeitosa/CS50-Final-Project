@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block head %} <script src="{{url_for('static', filename='sudoku.js')}}"></script> {% endblock %}
+
+{% block title %} Game Play {% endblock %}
+
+{% block main %}
+<section class="py-auto">
+  <div class="container">
+    <div class="row g-0">
+      <div id="stats" class="d-inline-flex justify-content-evenly mt-3">
+        <span id="lives"></span>
+        <button id="start-btn" class="btn btn-outline-primary btn-lg">Start Game</button>
+        <span id="timer"></span>
+      </div>
+      <div id="sudoku" class="justify-content-center py-auto mt-3 mb-2">
+        <div id="board"></div>
+        <div id="number-container" class="hidden">
+          <p id="one" class="text-primary border border-primary align-text-top text-center">1</p>
+          <p id="two" class="text-primary border border-primary align-text-top text-center">2</p>
+          <p id="three" class="text-primary border border-primary align-text-top text-center">3</p>
+          <p id="four" class="text-primary border border-primary align-text-top text-center">4</p>
+          <p id="five" class="text-primary border border-primary align-text-top text-center">5</p>
+          <p id="six" class="text-primary border border-primary align-text-top text-center">6</p>
+          <p id="seven" class="text-primary border border-primary align-text-top text-center">7</p>
+          <p id="eight" class="text-primary border border-primary align-text-top text-center">8</p>
+          <p id="nine" class="text-primary border border-primary align-text-top text-center">9</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

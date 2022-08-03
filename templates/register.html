@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<section class="login py-auto">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-5">
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1586030301401-54386553db94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" href="../static/styles.css">
+            </div>
+            <div class="col-lg-7 text-center py-5 animate__animated animate__fadeIn">
+                <h1>Register</h1>
+                <form action="/register" method="post">
+                    <div class="form-row py-3 pt-5">
+                        <div class="offset-1 col-lg-10">
+                            <input autocomplete="off" autofocus class="form-control mx-auto w-auto inp px-3" id="username" name="username" placeholder="Username" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row py-3">
+                        <div class="offset-1 col-lg-10">
+                            <input class="form-control mx-auto w-auto inp px-3" id="password" name="password" placeholder="Password" type="password">
+                        </div>
+                    </div>
+                    <div class="form-row py-3">
+                        <div class="offset-1 col-lg-10">
+                            <input class="form-control mx-auto w-auto inp px-3" id="confirmation" name="confirmation" placeholder="Password Confirmation" type="password">
+                        </div>
+                    </div>
+                    <div class="form-row py-4">
+                        <div class="offset-1 col-lg-10">
+                            <button class="btnRegister" type="submit">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

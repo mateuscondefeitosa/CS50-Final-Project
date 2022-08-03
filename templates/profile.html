@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit Account
+{% endblock %}
+
+
+{% block main %}
+<section class="profile py-auto">
+    <div class="container">
+        <div class="row g-0 container_profile">
+            <div class="col-lg-6 text-center py-5">
+                <h1>Profile</h1>
+                <div class="mt-5 pt-2">
+                    <div class="col-lg-12">
+                        <span class="profile_item">Account name:</span> <span class="profile_result">{{ name }}</span>
+                    </div>
+                </div>
+                <div class="mt-5 pt-2">
+                    <div class="col-lg-12">
+                        <span class="profile_item">Points:</span> <span class="profile_result">{{ points }}</span>
+                    </div>
+                </div>
+                {% for rank in userRanking %}
+                    {% if rank["id"] == session["user_id"] %}
+                        <div class="mt-5 pt-2">
+                            <div class="col-lg-12">
+                                <span class="profile_item">Ranking:</span> <span class="profile_result">{{ loop.index }}º</span>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="col-lg-6 text-center py-5">
+                <h2>Edit Account</h2>
+                <form action="/resetUsername" method="post">
+                    <div class="form-row mt-1 pt-4 d-block">
+                        <div class="offset-1 col-lg-10">
+                            <input class="form-control px-5 mx-auto w-auto inp" id="username" name="username" placeholder="New Username" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row mt-2">
+                        <div class="offset-1 col-lg-10">
+                            <button class="btn btn-primary btnProfile px-5 mx-5 w-auto" type="submit">Change Username</button>
+                        </div>
+                    </div>
+                </form>
+                <form action="/resetPassword" method="post">
+                    <div class="form-row py-3 pt-5">
+                        <input class="form-control px-5 mx-auto w-auto inp" id="password" name="password" placeholder="New Password" type="password">
+                    </div>
+                    <div class="form-row mt-2">
+                        <input class="form-control px-5 mx-auto w-auto inp" id="confirmation" name="confirmation" placeholder="Password Confirmation" type="password">
+                    </div>
+                    <div class="form-row mt-2 mb-5 pb-2">
+                        <div class="offset-1 col-lg-10">
+                            <button class="btn btn-primary btnProfile px-5 mx-5 w-auto" type="submit">Reset Password &#128274;</button>
+                        </div>
+                    </div>
+                </form>
+                <h3>Delete Account</h3>
+                <form action="/deleteAccount" method="post">
+                    <div class="form-row pt-1 d-block">
+                        <div class="offset-1 col-lg-10">
+                            <button class="btn btn-outline-danger" type="submit">DELETE</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit Account
+{% endblock %}
+
+{% block main %}
+    <h1>Edit you Account</h1>
+    <div>
+        <form action="/resetUsername" method="post">
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="username" name="username" placeholder="New Username" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Change Username</button>
+        </form>
+    </div>
+    <div>
+        <form action="/resetPassword" method="post">
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="New Password" type="password">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Password Confirmation" type="password">
+            </div>
+            <button class="btn btn-primary" type="submit">Reset Password</button>
+        </form>
+    </div>
+    <h3>DELETE ACCOUNT</h3>
+    <div>
+        <form action="/deleteAccount" method="post">
+            <button class="btn btn-danger" type="submit">DELETE</button>
+        </form>
+    </div>
+
+
+
+{% endblock %}

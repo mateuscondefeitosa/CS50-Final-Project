@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<section class="login py-auto">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-5">
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1640537702474-3e503c21eefc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" href="../static/styles.css">
+            </div>
+            <div class="col-lg-7 text-center py-5 animate__animated animate__fadeIn">
+                <h1>Login</h1>
+                <form action="/login" method="post">
+                    <div class="form-row py-3 pt-5">
+                        <div class="offset-1 col-lg-10">
+                            <input autofocus class="form-control mx-auto w-auto inp px-3" id="username" name="username" placeholder="Username" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row py-3">
+                        <div class="offset-1 col-lg-10">
+                            <input class="form-control mx-auto w-auto inp px-3" id="password" name="password" placeholder="Password" type="password">
+                        </div>
+                    </div>
+                    <div class="form-row py-4">
+                        <div class="offset-1 col-lg-10">
+                            <button class="btnLogin" type="submit">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

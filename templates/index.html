@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+    <div class="section index">
+        <h1>SUDOKU BRAIN</h2>
+        <div class="container mt-5 py-2">
+            <div class="row g-0 container_index row_index">
+                <div class="col-lg-6 image_div">
+                    <img class="img-fluid" src="/static/GIF.gif" href="../static/styles.css">
+                </div>
+                <div class="col-lg-4 text-center offset-1 pt-5">
+                    <h3>Play now and be the most <span class="index_span">awesome</span><br> Sudoku BRAINER!</h3>
+                    <div class="form-row mt-5 pt-1">
+                        <div class="offset-1 col-lg-10">
+                                <a class="btnIndex" type="submit" href="/gamePlay">PLAY NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
